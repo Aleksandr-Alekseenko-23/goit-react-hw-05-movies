@@ -12,8 +12,8 @@ import PropTypes from 'prop-types';
 
 function SearchMovieForm({ onSubmit }) {
   const [movieTitle, setMovieTitle] = useState('');
-  const [searchParams, setSearchParams] = useSearchParams();
-  console.log(searchParams);
+  const [SearchParams, setSearchParams] = useSearchParams();
+  console.log(SearchParams);
 
   const handleTitleChange = ({ currentTarget: { value } }) => {
     setMovieTitle(value.toLowerCase());

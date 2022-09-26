@@ -1,6 +1,7 @@
 import React from 'react';
 import { useFetchMovieCredits } from 'hooks/useFetchMovie';
 import { List, Item, Image, Text, SubText } from './Cast.styled';
+import imageAs from '../../assets/img/NoPhotos.png';
 
 function Cast() {
   const movie = useFetchMovieCredits();
@@ -13,7 +14,11 @@ function Cast() {
             return (
               <Item key={id}>
                 <Image
-                  src={`https://image.tmdb.org/t/p/original${profile_path}`}
+                  src={
+                    profile_path
+                      ? `https://image.tmdb.org/t/p/original${profile_path}`
+                      : imageAs
+                  }
                   alt={name}
                 />
                 <Text>{name}</Text>

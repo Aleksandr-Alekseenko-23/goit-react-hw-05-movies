@@ -39,7 +39,6 @@ export async function getMovie(movieId, path = 'movie') {
       pathUrl = `movie/${movieId}`;
       break;
   }
-  console.log('path', path, 'pathUrl', pathUrl);
 
   if (pathUrl) {
     const response = await axios(pathUrl, {
