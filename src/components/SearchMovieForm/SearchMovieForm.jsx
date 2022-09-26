@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { toast } from 'react-toastify';
-import { useLocation, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import {
   Searchbar,
   SearchForm,
@@ -13,12 +13,8 @@ import PropTypes from 'prop-types';
 function SearchMovieForm({ onSubmit }) {
   const [movieTitle, setMovieTitle] = useState('');
   const [searchParams, setSearchParams] = useSearchParams();
-  const location = useLocation();
+  console.log(searchParams);
 
-  // useEffect(() => {
-  //   query && onSubmit(query);
-  // }, [query]);
-  // query && setMovieTitle(query)
   const handleTitleChange = ({ currentTarget: { value } }) => {
     setMovieTitle(value.toLowerCase());
   };

@@ -6,7 +6,6 @@ import {
   Image,
   Text,
 } from '../HomePageItem/HomePageItem.styled.js';
-import NoPhotos from '../../assets/img/NoPhotos.png';
 
 function ImageGalleryItem({ movie }) {
   const location = useLocation();
